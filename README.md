@@ -1,4 +1,4 @@
-* WooCommerce Default Attributes
+# WooCommerce Default Attributes
 Adds default attributes to new products in WooCommerce.
 
 Forked from:
