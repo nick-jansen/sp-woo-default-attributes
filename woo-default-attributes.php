@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name:		Woo Default Attributes
+ * Plugin Name:		WooCommerce Default Attributes
  * Description: 	Define default attributes to be automatically added in WooCommerce new product page.
- * Author: 				Kuuak
- * Version: 			1.0.3
- * Author URI:		https://profiles.wordpress.org/kuuak
- * License:				GPL-2.0+
+ * Author: 			Sitepilot
+ * Version: 		1.0.0
+ * Author URI:		https://sitepilot.io/
+ * License:			GPL-2.0+
  * License URI:		http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:		wdat
  * Domain Path:		/languages
@@ -20,7 +20,7 @@
  * @package		Woo_Default_Attributes
  * @author		Kuuak
  * @license		GPL-2.0+
- * @link			https://github.com/Kuuak/woo-default-attributes
+ * @link		https://github.com/sitepilot/woo-default-attributes
  */
 
 /* Prevent loading this file directly */
@@ -135,5 +135,5 @@ if ( !class_exists( 'Woo_Default_Attributes' ) ) {
 	}
 }
 if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
-new Woo_Default_Attributes();
+    new Woo_Default_Attributes();
 }

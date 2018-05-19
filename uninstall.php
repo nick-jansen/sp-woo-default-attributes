@@ -3,9 +3,9 @@
  * Fired when the plugin is uninstalled.
  *
  * @package		Woo_Default_Attributes
- * @author		Kuuak
+ * @author		Sitepilot
  * @license		GPL-2.0+
- * @link			https://github.com/Kuuak/woo-default-attributes
+ * @link		https://github.com/sitepilot/sp-woo-default-attributes
  */
 
 	// If uninstall not called from WordPress, then exit.

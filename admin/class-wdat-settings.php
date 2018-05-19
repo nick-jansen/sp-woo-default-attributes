@@ -2,7 +2,7 @@
 /**
  * The Settings page of the plugin.
  *
- * @link       https://github.com/Kuuak/woo-default-attributes
+ * @link       https://github.com/sitepilot/sp-woo-default-attributes
  * @since      1.0.0
  *
  * @package    Woo_Default_Attributes
@@ -92,7 +92,7 @@ if ( !class_exists( 'WADT_Settings' ) ) {
 
 			add_settings_section(
 				'wdat_default_attributes',
-				__( "Settings", 'pbtt' ),
+				__( "Settings", 'wdat' ),
 				array( $this,  'render_desc' ),
 				'wdat'
 			);
