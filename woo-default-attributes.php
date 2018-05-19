@@ -33,7 +33,6 @@ defined( 'ABSPATH' ) || exit;
 function woo_default_attributes_activate() {}
 register_activation_hook( __FILE__, 'woo_default_attributes_activate' );
 
-
 if ( !class_exists( 'Woo_Default_Attributes' ) ) {
 
 	/**
@@ -81,9 +80,30 @@ if ( !class_exists( 'Woo_Default_Attributes' ) ) {
 			$this->dir_path			= trailingslashit( plugin_dir_path( __FILE__ ) );
 			$this->dir_uri			= trailingslashit( plugin_dir_url(  __FILE__ ) );
 
+            add_filter('sp_plugins', array($this, 'sp_register_plugin'));
+
 			$this->load_dependencies();
 			$this->load_textdomain();
 		}
+
+        /**
+         * Register as Sitepilot plugin.
+         *
+         * @param $plugins
+         * @return array
+         */
+        public function sp_register_plugin($plugins)
+        {
+            $plugin = array();
+            $plugin['name'] = 'Woo Default Attributes';
+            $plugin['slug'] = 'sp-woo-default-attributes';
+            $plugin['version'] = '1.0.0';
+            $plugin['file'] = __FILE__;
+            $plugin['dir'] = __DIR__;
+            $plugins[] = $plugin;
+
+            return $plugins;
+        }
 
 		/**
 		 * Init the plugin functions
